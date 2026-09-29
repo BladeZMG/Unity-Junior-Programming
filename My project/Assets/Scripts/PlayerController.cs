@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(Vector3.forward * Time.deltaTime * speed * moveinput.y);
         transform.Translate(Vector3.forward * Time.deltaTime * turnspeed * moveinput.x);
+        transform.Rotate(Vector3.up, Time.deltaTime * turnspeed * moveinput.x);
   
     }
 }
