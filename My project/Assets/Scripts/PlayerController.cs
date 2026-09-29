@@ -7,15 +7,18 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.0f;
     public float turnspeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public InputAction moveaction; 
+    public InputAction moveaction;
+    public Vector2 moveinput;
     void Start()
     {
-        
+        moveaction.Enable();
     }
 
     // Update is called once per frame
     void Update()
     {
+        moveinput = moveaction.ReadValue<Vector2>();
+
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
         transform.Translate(Vector3.forward * Time.deltaTime * turnspeed);
     }
