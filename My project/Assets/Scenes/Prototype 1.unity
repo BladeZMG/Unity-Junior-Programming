@@ -827,6 +827,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  turnspeed: 0
+  moveaction:
+    m_Name: Moveaction
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 31c2b3f3-2877-4d63-8639-19f91ef915ad
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 3D Vector
+      m_Id: 71c4d723-ea2c-4cee-bfe6-47f5b0fe6c19
+      m_Path: 3DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Moveaction
+      m_Flags: 4
+    - m_Name: up
+      m_Id: e37d50c8-9f74-4521-9f9c-a1047f1e6dd8
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Moveaction
+      m_Flags: 8
+    - m_Name: down
+      m_Id: ae654ddc-5974-4004-85b0-be227e8665e1
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Moveaction
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 6305c7de-f503-475c-904a-8ea626159916
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Moveaction
+      m_Flags: 8
+    - m_Name: right
+      m_Id: bdc2bd45-20de-40d2-a74c-41fcdeb45735
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Moveaction
+      m_Flags: 8
+    - m_Name: forward
+      m_Id: 14c2aadd-08e0-4515-a1fe-79f1ed9a49cf
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Moveaction
+      m_Flags: 8
+    - m_Name: backward
+      m_Id: dc5f8d81-8ac7-4459-bff3-b39f85df2756
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Moveaction
+      m_Flags: 8
+    m_Flags: 0
 --- !u!54 &1958156843
 Rigidbody:
   m_ObjectHideFlags: 0
