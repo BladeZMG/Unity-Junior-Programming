@@ -5,7 +5,7 @@ using Y = UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5.0f;
-    public float turnspeed;
+    public float turnspeed = 5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public InputAction moveaction;
     public Vector2 moveinput;
