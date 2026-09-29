@@ -19,7 +19,8 @@ public class PlayerController : MonoBehaviour
     {
         moveinput = moveaction.ReadValue<Vector2>();
 
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
-        transform.Translate(Vector3.forward * Time.deltaTime * turnspeed);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * moveinput.y);
+        transform.Translate(Vector3.forward * Time.deltaTime * turnspeed * moveinput.x);
+  
     }
 }
