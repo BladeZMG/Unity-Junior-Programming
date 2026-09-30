@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Y = UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class playercontroller: MonoBehaviour
 {
     public float speed = 5.0f;
     public float turnspeed = 5f;

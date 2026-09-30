@@ -3,32 +3,38 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class playercontroler: MonoBehaviour
+
+
+public class PlayerController : MonoBehaviour
 {
     public float forwardSpeed = 10f;
     public float tiltSpeed = 50f;
-    public float levelSpeed = 2f;
+    public float propellerSpeed = 1000f;
+
+    public Transform propeller;
 
     void Update()
     {
-        // Move forward constantly
+        // Move the plane forward
         transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
 
+        // Tilt upward
         if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.Rotate(Vector3.right * tiltSpeed * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+
+        // Tilt downward
+        if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.Rotate(Vector3.left * tiltSpeed * Time.deltaTime);
         }
-        else
+
+        // Spin the propeller
+        if (propeller != null)
         {
-            // Slowly return to level
-            transform.rotation = Quaternion.Lerp(
-                transform.rotation,
-                Quaternion.Euler(0, transform.eulerAngles.y, 0),
-                levelSpeed * Time.deltaTime
+            propeller.Rotate(
+                Vector3.forward * propellerSpeed * Time.deltaTime
             );
         }
     }
