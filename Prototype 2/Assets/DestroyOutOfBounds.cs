@@ -1,9 +1,11 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private float topBound = 30;
+    private float lowerBound = -10;
     void Start()
     {
 
@@ -14,5 +16,13 @@ public class DestroyOutOfBounds : MonoBehaviour
     {
         if (transform.position.z > topBound)
             Destroy(gameObject);
+        else if (transform.position.z < lowerBound)
+        {
+            Destroy(gameObject);
+            {
+
+            }
+        }
     }
 }
+
