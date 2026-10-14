@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     public InputAction fireaction;
 
-    public GameObject projectileprefab; 
+    public GameObject projectileprefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,16 +32,16 @@ public class PlayerController : MonoBehaviour
         if (transform.position.x > xRange)
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
-        } 
-            moveInput = moveAction.ReadValue<Vector2>();
-            transform.Translate(Vector3.right * moveInput.x * Time.deltaTime * speed);
+        }
+        moveInput = moveAction.ReadValue<Vector2>();
+        transform.Translate(Vector3.right * moveInput.x * Time.deltaTime * speed);
 
         if (fireaction.triggered)
         {
-
+            // Launch a projectille from the player
+            Instantiate(projectileprefab, transform.position, projectileprefab.transform.rotation);
         }
     }
-
-    }
+}
 
  
