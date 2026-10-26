@@ -10,14 +10,16 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         spawnAction.Enable();
+        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
     private float spawnRangex = 20;
     private float spawnPosZ = 20;
+    private float startDelay = 2;
+    private float spawnInterval = 1.5f;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
         {
             // Randomly generate animal index and spawn position
             {
