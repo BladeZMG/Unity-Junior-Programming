@@ -15,16 +15,18 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     private float spawnRangex = 20;
     private float spawnPosZ = 20;
-    void Update() { 
-        if (Input.GetKeyDown(KeyCode.S)) {
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
             // Randomly generate animal index and spawn position
-            Vector3 spwanPos = new Vector3(Random.Range(-spawnRangex, spawnRangex),0, spawnPosZ);
             {
-                int animalIndex = Random.Range(0, animalPrefabs.Length);
                 if (spawnAction.triggered)
                 {
-                    Instantiate(animalPrefabs[animalIndex],spwanPos, animalPrefabs[animalIndex].transform.rotation);
                 }
+                Vector3 spawnPos = new Vector3(Random.Range(-spawnRangex, spawnRangex), 0, spawnPosZ);
+                int animalIndex = Random.Range(0, animalPrefabs.Length);
+                Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
             }
         }
     }
