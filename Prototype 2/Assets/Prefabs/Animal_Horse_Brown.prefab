@@ -1162,6 +1162,7 @@ GameObject:
   - component: {fileID: 1965067294450035210}
   - component: {fileID: 6546895179209745396}
   - component: {fileID: 3703479433384146032}
+  - component: {fileID: 8801942317530627617}
   m_Layer: 0
   m_Name: Animal_Horse_Brown
   m_TagString: Untagged
@@ -1178,7 +1179,7 @@ Transform:
   m_GameObject: {fileID: 5069990797860019795}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.9999982, z: 0.0018936936, w: 0}
-  m_LocalPosition: {x: 1.6, y: 0.01, z: 27.42}
+  m_LocalPosition: {x: 3.29, y: -0.614, z: 27.422}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1225,6 +1226,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
+--- !u!65 &8801942317530627617
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5069990797860019795}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 22.898636, y: 39.425575, z: 44.6978}
+  m_Center: {x: -1.0624146, y: 19.212801, z: 3.4572341}
 --- !u!1 &5518686050919865455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,7 +1304,7 @@ Transform:
   m_GameObject: {fileID: 5876375688788985366}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 35.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
