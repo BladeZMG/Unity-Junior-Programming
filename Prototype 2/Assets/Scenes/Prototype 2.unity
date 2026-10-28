@@ -119,6 +119,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &91444321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3732958705030287568, guid: 0d65a6588ea9f1c4a85466110fd9c794, type: 3}
+  m_PrefabInstance: {fileID: 6674791956171410257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &91444327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91444321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0567cdd2edaf3f84b8c85d895929823a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalPrefab: {fileID: 91444321}
+  spawnRangeX: 10
+  spawnRangeZ: 10
+  spawnY: 0
+  spawnInterval: 3
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +262,28 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &189847730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5069990797860019795, guid: adc05869a17a1954583fdca31e1d5750, type: 3}
+  m_PrefabInstance: {fileID: 4570451265929987614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &189847736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189847730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0567cdd2edaf3f84b8c85d895929823a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalPrefab: {fileID: 189847730}
+  spawnRangeX: 10
+  spawnRangeZ: 10
+  spawnY: 0
+  spawnInterval: 3
 --- !u!1 &425805626
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +397,7 @@ Transform:
   m_GameObject: {fileID: 475985833}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: -0.14, y: -0.66, z: 10}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -498,13 +542,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.003731568, y: -0.7186823, z: -0.00028952566, w: 0.69532853}
-  m_LocalPosition: {x: 1.67, y: 2.71, z: 1.05}
+  m_LocalRotation: {x: 0.14279506, y: 0.018448811, z: 0.0018431955, w: 0.98957866}
+  m_LocalPosition: {x: 0.37, y: 5.78, z: -8.38}
   m_LocalScale: {x: 1, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0.273, y: -91.893, z: -0.33}
+  m_LocalEulerAnglesHint: {x: 16.412, y: 2.213, z: 0.533}
 --- !u!114 &534669906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,6 +593,28 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &741489843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8404880698511172335, guid: bc9bbe59e3331624ba2631bf51e5aa32, type: 3}
+  m_PrefabInstance: {fileID: 5365952903632219859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &741489849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741489843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0567cdd2edaf3f84b8c85d895929823a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalPrefab: {fileID: 741489843}
+  spawnRangeX: 10
+  spawnRangeZ: 10
+  spawnY: 0
+  spawnInterval: 3
 --- !u!1 &992285705
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,24 +682,16 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Move
       m_Flags: 4
-    - m_Name: up
-      m_Id: 8147a63d-c312-4c3e-868d-91bcebbc933e
-      m_Path: <Keyboard>/upArrow
+    - m_Name: 2D Vector
+      m_Id: 6f739592-ca00-40b4-9ea9-8ded1c043fd7
+      m_Path: 2DVector
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Move
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 98d8ff1b-d559-460d-b892-1b2834386aac
-      m_Path: <Keyboard>/downArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
+      m_Flags: 4
     - m_Name: left
-      m_Id: 75522742-3c72-44af-95ee-5f2d9e0a0d88
+      m_Id: faa47278-9231-47b9-b148-9b68b8a294f5
       m_Path: <Keyboard>/a
       m_Interactions: 
       m_Processors: 
@@ -641,44 +699,58 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     - m_Name: right
-      m_Id: 3fa9082b-79c4-45df-a33a-de9440de06cb
+      m_Id: ba758074-abd3-491a-af6a-2870c8247535
       m_Path: <Keyboard>/d
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Move
       m_Flags: 8
-    - m_Name: forward
-      m_Id: 56e75612-b99e-4e25-a990-551fe53698d1
-      m_Path: <Keyboard>/w
+    - m_Name: 2D Vector
+      m_Id: 1c0b1ce6-263a-4eb3-8cb0-32201a903fa5
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 4
+    - m_Name: left
+      m_Id: 94ba76ab-3c1d-4567-9ff1-252c7002e4bf
+      m_Path: <Keyboard>/leftArrow
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Move
       m_Flags: 8
-    - m_Name: backward
-      m_Id: 480b2a5a-408b-4c5c-9a29-fc6ead681144
-      m_Path: <Keyboard>/s
+    - m_Name: right
+      m_Id: 91b1aa8f-cd56-4b2c-9234-032aa972d445
+      m_Path: <Keyboard>/rightArrow
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Move
       m_Flags: 8
     m_Flags: 0
-  moveInput: {x: 0, y: 0}
-  speed: 10
-  xRange: 10
-  projectilePrefab: {fileID: 0}
-  fireaction:
-    m_Name: Fireaction
+  fireAction:
+    m_Name: Fire
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 4b5877a4-6a85-4461-85eb-2d0be1efb181
+    m_Id: 35bac829-09fb-4238-b78c-d91c88c8a857
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 6ef98ebe-5367-4cec-bad0-9ec0b39d1796
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Fire
+      m_Flags: 0
     m_Flags: 0
-  projectileprefab: {fileID: 0}
+  speed: 10
+  xRange: 10
+  projectilePrefab: {fileID: 5859996600126754225, guid: 341b1125f42aeee4e98d901fb32391d1, type: 3}
 --- !u!1 &1343032388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,7 +1099,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5069990797860019795, guid: adc05869a17a1954583fdca31e1d5750, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 189847736}
   m_SourcePrefab: {fileID: 100100000, guid: adc05869a17a1954583fdca31e1d5750, type: 3}
 --- !u!1001 &5365952903632219859
 PrefabInstance:
@@ -1084,7 +1159,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8404880698511172335, guid: bc9bbe59e3331624ba2631bf51e5aa32, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 741489849}
   m_SourcePrefab: {fileID: 100100000, guid: bc9bbe59e3331624ba2631bf51e5aa32, type: 3}
 --- !u!1001 &6674791956171410257
 PrefabInstance:
@@ -1141,7 +1219,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3732958705030287568, guid: 0d65a6588ea9f1c4a85466110fd9c794, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 91444327}
   m_SourcePrefab: {fileID: 100100000, guid: 0d65a6588ea9f1c4a85466110fd9c794, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
