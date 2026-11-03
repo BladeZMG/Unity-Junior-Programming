@@ -1,25 +1,35 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyOutOfBoundsX : MonoBehaviour
+public class SpawnManagerX : MonoBehaviour
 {
-    private float leftLimit = 30;
-    private float bottomLimit = -5;
+    public GameObject[] ballPrefabs;
 
-    // Update is called once per frame
-    void Update()
+    private float spawnLimitXLeft = -22f;
+    private float spawnLimitXRight = 7f;
+    private float spawnPosY = 30f;
+
+    private float startDelay = 1f;
+    private float spawnInterval = 4f;
+
+    void Start()
     {
-        // Destroy dogs if x position less than left limit
-        if (transform.position.x > leftLimit)
-        {
-            Destroy(gameObject);
-        } 
-        // Destroy balls if y position is less than bottomLimit
-        else if (transform.position.z < bottomLimit)
-        {
-            Destroy(gameObject);
-        }
+        InvokeRepeating("SpawnRandomBall", startDelay, spawnInterval);
+    }
 
+    void SpawnRandomBall()
+    {
+        int randomIndex = Random.Range(0, ballPrefabs.Length);
+
+        Vector3 spawnPos = new Vector3(
+            Random.Range(spawnLimitXLeft, spawnLimitXRight),
+            spawnPosY,
+            0f
+        );
+
+        Instantiate(ballPrefabs[randomIndex], spawnPos,
+            ballPrefabs[randomIndex].transform.rotation);
     }
 }
